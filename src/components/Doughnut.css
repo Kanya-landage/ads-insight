@@ -1,0 +1,16 @@
+.chart-container .recharts-legend-wrapper ul li {
+  margin-bottom: 10px;
+}
+
+.recharts-legend-wrapper {
+  position: absolute;
+  left: 50% !important;
+  top: 30% !important;
+}
+
+.MuiSelect-select
+  .MuiSelect-outlined
+  .MuiInputBase-input
+  .MuiOutlinedInput-input {
+  padding: 5.5px 14px !important;
+}
