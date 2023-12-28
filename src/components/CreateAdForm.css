@@ -1,8 +1,0 @@
-.MuiFormControl-root {
-  fieldset {
-    top: 0px !important;
-    legend {
-      display: none !important;
-    }
-  }
-}
