@@ -24,7 +24,7 @@ const TableAds = () => {
     createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
   ];
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ height: "320px" }}>
       <Table sx={{ minWidth: 650 }} aria-label="caption table">
         <TableHead>
           <TableRow>
