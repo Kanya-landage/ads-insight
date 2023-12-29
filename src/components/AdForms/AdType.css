@@ -1,0 +1,54 @@
+.create-ad-card {
+  padding: 5px;
+  position: relative;
+  height: 38rem;
+}
+
+.create-ad-title {
+  position: absolute;
+  top: 20;
+  left: 20;
+}
+.text-ad-card {
+  padding: 10px;
+  border: 2px solid #eaeded;
+  position: relative;
+}
+
+.ad-card-content {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  width: 96%;
+  box-sizing: border-box;
+  bottom: 2%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeded;
+}
+
+.submit-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+  background-color: "white";
+  border: 2px solid #000;
+  box-shadow: 24;
+  padding: 4;
+}
+@media only screen and (max-width: 600px) {
+  .create-ad-card {
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .create-ad-card {
+    height: auto;
+  }
+}

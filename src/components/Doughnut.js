@@ -15,7 +15,7 @@ const Doughnut = () => {
         <div className="custom-legend">
           {props?.payload.map((entry, index) => (
             <div
-              key={`legend-${index}`}
+              key={index}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -23,7 +23,7 @@ const Doughnut = () => {
               }}
             >
               <svg
-                class="recharts-surface"
+                className="recharts-surface"
                 width="50"
                 height="20"
                 viewBox="0 0 50 20"

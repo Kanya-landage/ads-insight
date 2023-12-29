@@ -7,17 +7,23 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./AdType.css";
+import SubmitModal from "../SubmitModal";
 
 const CreateTextAd = () => {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
-    <Box sx={{ padding: "30px" }}>
-      <Card>
-        <CardContent>
+    <Box sx={{ p: 5 }}>
+      <Card className="create-ad-card">
+        <CardContent sx={{ height: "100%" }}>
           <Typography sx={{ mb: 2, fontWeight: 600 }}>
             Create Text & Media
           </Typography>
-          <Grid container spacing={2} sx={{ padding: "10px" }}>
+
+          <Grid container spacing={2}>
             <Grid container item spacing={2} xs={12} md={6}>
               <Grid item xs={12}>
                 <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
@@ -105,7 +111,16 @@ const CreateTextAd = () => {
               />
             </Grid>
 
-            <Grid container sx={{ justifyContent: "end", mt: 2 }}>
+            <Grid
+              container
+              sx={{
+                justifyContent: "end",
+                mt: 2,
+                position: "absolute",
+                bottom: 20,
+                right: 20,
+              }}
+            >
               <Button
                 variant="contained"
                 sx={{
@@ -114,16 +129,23 @@ const CreateTextAd = () => {
                   px: 4,
                   color: "black",
                 }}
+                onClick={() => navigate("/ad-type")}
               >
                 Back
               </Button>
-              <Button variant="contained" sx={{ px: 4 }}>
-                Next
+              <Button
+                variant="contained"
+                sx={{ px: 4 }}
+                onClick={() => setOpen(true)}
+              >
+                Submit
               </Button>
             </Grid>
           </Grid>
         </CardContent>
       </Card>
+
+      <SubmitModal open={open} setOpen={setOpen} />
     </Box>
   );
 };

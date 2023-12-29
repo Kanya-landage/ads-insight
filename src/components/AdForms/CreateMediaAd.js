@@ -4,17 +4,23 @@ import {
   Card,
   CardContent,
   Grid,
+  Modal,
   Paper,
   TextField,
   Typography,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import "./AdType.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import SubmitModal from "../SubmitModal";
 
 const CreateMediaAd = () => {
+  const navigate = useNavigate();
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <Box sx={{ padding: "30px" }}>
-      <Card>
+    <Box sx={{ p: 5 }}>
+      <Card className="create-ad-card">
         <CardContent>
           <Typography sx={{ mb: 1, fontWeight: 600 }}>
             Create Text & Media
@@ -57,7 +63,7 @@ const CreateMediaAd = () => {
                 <TextField
                   id="outlined-multiline"
                   multiline
-                  rows={4} // Adjust the number of rows based on your design
+                  rows={4}
                   variant="outlined"
                   placeholder="Add a primary text that would make user understand about your product"
                   fullWidth
@@ -169,16 +175,22 @@ const CreateMediaAd = () => {
                   px: 4,
                   color: "black",
                 }}
+                onClick={() => navigate("/ad-type")}
               >
                 Back
               </Button>
-              <Button variant="contained" sx={{ px: 4 }}>
+              <Button
+                variant="contained"
+                sx={{ px: 4 }}
+                onClick={() => setOpen(true)}
+              >
                 Submit
               </Button>
             </Grid>
           </Grid>
         </CardContent>
       </Card>
+      <SubmitModal open={open} setOpen={setOpen} />
     </Box>
   );
 };

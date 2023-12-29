@@ -16,6 +16,7 @@ import Doughnut from "./Doughnut";
 import TableChartOutlinedIcon from "@mui/icons-material/TableChartOutlined";
 import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import "./Doughnut.css";
 
 const HeaderData = () => {
   const [clicks, setClicks] = React.useState("");
@@ -75,10 +76,10 @@ const Dashboard = () => {
         spacing={2}
         justifyContent="center"
         alignItems="center"
-        marginTop="3rem"
+        sx={{ padding: 3 }}
       >
-        <Grid item xs={6} sx={{ position: "relative" }}>
-          <Card sx={{ height: "460px" }}>
+        <Grid item xs={12} md={12} lg={6} sx={{ position: "relative" }}>
+          <Card className="ad-insight-card">
             <CardHeader
               title={<HeaderData />}
               sx={{ padding: "8px", borderBottom: "1px solid #E0E0E0" }}

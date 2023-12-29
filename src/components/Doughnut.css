@@ -10,3 +10,28 @@
   position: absolute;
   transform: translate(50%, -95%);
 }
+.ad-insight-card {
+  height: 490px;
+  margin-top: 3rem;
+}
+.table-container {
+  height: 320px;
+}
+
+@media only screen and (max-width: 600px) {
+  .recharts-pie {
+    position: absolute;
+    transform: translate(0, 0);
+  }
+  .recharts-legend-wrapper {
+    position: absolute;
+    transform: translate(10%, 45%);
+  }
+  .ad-insight-card {
+    height: 80vh;
+    margin-top: 20px;
+  }
+  .table-container {
+    height: auto;
+  }
+}
